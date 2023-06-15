@@ -1,4 +1,16 @@
 'use strict';
+
+window.addEventListener('load', async () => {
+  if ('serviceWorker' in navigator) {
+    try {
+      const reg = await navigator.serviceWorker.register('./service-worker.js');
+      console.log('Service Worker registered successfully. Registration log: ', reg);
+    } catch (error) {
+      console.log('Service Worker not registered. Error: ', error);
+    }
+  }
+});
+
 const calcDisplay = document.querySelector('.calculation');
 const resDisplay = document.querySelector('.result');
 const keys = document.querySelector('.keyboard');
@@ -99,9 +111,7 @@ function keysHandler(event) {
               secondVar += '0';
             }
             resDisplay.textContent = String(+firstVar + +secondVar);
-            calcDisplay.textContent = String(
-              firstVar + operationSign + secondVar + ' = '
-            );
+            calcDisplay.textContent = String(firstVar + operationSign + secondVar + ' = ');
           }
 
           firstVar = '';
@@ -123,9 +133,7 @@ function keysHandler(event) {
               secondVar += '0';
             }
             resDisplay.textContent = String(+firstVar - +secondVar);
-            calcDisplay.textContent = String(
-              firstVar + operationSign + secondVar + ' = '
-            );
+            calcDisplay.textContent = String(firstVar + operationSign + secondVar + ' = ');
           }
 
           firstVar = '';
@@ -147,9 +155,7 @@ function keysHandler(event) {
               secondVar += '0';
             }
             resDisplay.textContent = String(+firstVar * +secondVar);
-            calcDisplay.textContent = String(
-              firstVar + operationSign + secondVar + ' = '
-            );
+            calcDisplay.textContent = String(firstVar + operationSign + secondVar + ' = ');
           }
 
           firstVar = '';
@@ -171,9 +177,7 @@ function keysHandler(event) {
               secondVar += '0';
             }
             resDisplay.textContent = String(+firstVar / +secondVar);
-            calcDisplay.textContent = String(
-              firstVar + operationSign + secondVar + ' = '
-            );
+            calcDisplay.textContent = String(firstVar + operationSign + secondVar + ' = ');
           }
 
           firstVar = '';
