@@ -1,8 +1,8 @@
 # PWA Calculator
 # PWA Калькулятор  
 
-#### Example internet-page available at https://denis-ttk-1975.github.io/CalculatorSkillBox/
-#### Работающий сайт размещен на https://denis-ttk-1975.github.io/CalculatorSkillBox/
+#### Example internet-page available at https://pwa-calculator-six.vercel.app/
+#### Работающий сайт размещен на https://pwa-calculator-six.vercel.app/
 
 ## Author - Denis Ulesov
 ## Автор - Денис Улесов
