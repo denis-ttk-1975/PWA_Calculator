@@ -1,13 +1,21 @@
+// <reference lib="WebWorker" />
+
+// export empty type because of tsc --isolatedModules flag
+export type {};
+declare const self: ServiceWorkerGlobalScope;
+
 const staticCacheName = 'static-den-calc-v1';
 
 const cashedAssets = ['index.html', 'main.js', 'style.css'];
 
 self.addEventListener('install', (event) => {
   console.log('install');
-  event.waitUntil(async () => {
-    const cache = await caches.open(staticCacheName);
-    await cache.addAll(cashedAssets);
-  });
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(staticCacheName);
+      await cache.addAll(cashedAssets);
+    })()
+  );
 });
 
 self.addEventListener('fetch', (e) => {
