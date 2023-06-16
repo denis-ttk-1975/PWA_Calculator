@@ -2,7 +2,14 @@
   "compilerOptions": {
     "module": "commonjs",
     "sourceMap": true,
-    "jsx": "react"
+    "jsx": "react",
+    "lib": ["es2019", "dom", "es6", "webworker"],
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+
+    "target": "es5",
+    "outDir": "."
   },
   "exclude": ["node_modules"]
 }
