@@ -1,0 +1,22 @@
+{
+  "name": "pwa_calculator",
+  "version": "1.0.0",
+  "description": "PWA Calculator with manifest & service workers for cashing",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis-ttk-1975/PWA_Calculator.git"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": "Denis Ulesov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denis-ttk-1975/PWA_Calculator/issues"
+  },
+  "homepage": "https://github.com/denis-ttk-1975/PWA_Calculator#readme"
+}
