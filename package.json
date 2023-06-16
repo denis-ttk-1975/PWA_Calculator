@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/denis-ttk-1975/PWA_Calculator/issues"
   },
-  "homepage": "https://github.com/denis-ttk-1975/PWA_Calculator#readme"
+  "homepage": "https://github.com/denis-ttk-1975/PWA_Calculator#readme",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
 }
